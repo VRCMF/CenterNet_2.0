@@ -1,0 +1,5 @@
+CenterNet_2.0 repository is used to modify the code eaiser
+---------------------------------------
+Time: 24/07/2019
+Note: First create this repository and update the log.txt
+---------------------------------------
