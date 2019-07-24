@@ -6,7 +6,6 @@ Time: 24/07/2019 11:11
 Note: Build the repository and upload the file to the repository
 
 Download links: https://drive.google.com/file/d/1SHR4CyBG5af9mmobqxLLNJ0Q1biQminB/view?usp=sharing  (ctdet_2x.pth)
-
                 https://drive.google.com/file/d/1y9N4UqBhFEsW1mW_p2eJhaaVgrLJLwYl/view?usp=sharing  (22/09/2019 model_last.pth)
 
 --------------------------------
