@@ -2,7 +2,7 @@
 This repository is used to modify the code easier
 
 # Method to modify the code safely
-1. git add.  (add the modified code and ready to upload)
+1. git add .  (add the modified code and ready to upload)
 
 2. git commit -m "upload notes"   (tranform the modified code to local repository)
 
