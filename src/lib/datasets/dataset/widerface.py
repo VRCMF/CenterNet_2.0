@@ -36,7 +36,7 @@ class WDFACE(data.Dataset):
       self.annot_path = os.path.join(
           self.data_dir, 'annotations', 
           'wf2coco_{}.json').format(split)
-    self.max_objs = 1968
+    self.max_objs = 2100
     self.class_name = [
       '__background__', 'face']
     self._valid_ids = np.arange(1, 2, dtype=np.int32)
@@ -103,8 +103,4 @@ class WDFACE(data.Dataset):
     # detections  = self.convert_eval_format(results)
     # json.dump(detections, open(result_json, "w"))
     self.save_results(results, save_dir)
-    coco_dets = self.coco.loadRes('{}/results.json'.format(save_dir))
-    coco_eval = COCOeval(self.coco, coco_dets, "bbox")
-    coco_eval.evaluate()
-    coco_eval.accumulate()
-    coco_eval.summarize()
+

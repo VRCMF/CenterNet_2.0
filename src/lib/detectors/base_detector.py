@@ -129,7 +129,7 @@ class BaseDetector(object):
       post_time += post_process_time - decode_time
 
       detections.append(dets)
-    
+
     results = self.merge_outputs(detections)
     torch.cuda.synchronize()
     end_time = time.time()

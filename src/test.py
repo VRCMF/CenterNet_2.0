@@ -17,6 +17,7 @@ from opts import opts
 from logger import Logger
 from utils.utils import AverageMeter
 from datasets.dataset_factory import dataset_factory
+#from datasets.widerface import
 from detectors.detector_factory import detector_factory
 
 class PrefetchDataset(torch.utils.data.Dataset):
@@ -69,6 +70,8 @@ def prefetch_test(opt):
   for ind, (img_id, pre_processed_images) in enumerate(data_loader):
     ret = detector.run(pre_processed_images)
     results[img_id.numpy().astype(np.int32)[0]] = ret['results']
+
+
     Bar.suffix = '[{0}/{1}]|Tot: {total:} |ETA: {eta:} '.format(
                    ind, num_iters, total=bar.elapsed_td, eta=bar.eta_td)
     for t in avg_time_stats:
@@ -77,12 +80,13 @@ def prefetch_test(opt):
         t, tm = avg_time_stats[t])
     bar.next()
   bar.finish()
+
   dataset.run_eval(results, opt.save_dir)
 
 def test(opt):
-  os.environ['CUDA_VISIBLE_DEVICES'] = opt.gpus_str
+  os.environ['CUDA_VISIBLE_DEVICES'] = opt.gpus_str      #for the gpu environment
 
-  Dataset = dataset_factory[opt.dataset]
+  Dataset = dataset_factory[opt.dataset]        #ctdet
   opt = opts().update_dataset_info_and_set_heads(opt, Dataset)
   print(opt)
   Logger(opt)
