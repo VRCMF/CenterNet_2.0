@@ -1,11 +1,22 @@
-# CenterNet_2.0
-This repository is used to modify the code easier
+# CenterNet_face
+The backup code for the CenterNet_face.
 
-# Method to modify the code safely
-1. git add .  (add the modified code and ready to upload)
+Face detection and face analysis based on the CenterNet architecture.
 
-2. git commit -m "upload notes"   (tranform the modified code to local repository)
+--------------------------------------------------------------------------------------------------
 
-3. git pull   (this operation would fix some confilt when the the project is a teamwork, default pull is master branch)
+Configuration: the main.py and the test.py configuration could be checked the configuration list.txt
 
-4. git push   (push the code to the remote github server, deliver the code to the master branch named "origin")
+--------------------------------------------------------------------------------------------------
+
+Network: the network structure could be checked it out ==>  https://github.com/VRCMF/CenterNet2/tree/master/src/lib/models/networks (some networks change would update recently)
+
+--------------------------------------------------------------------------------------------------
+
+Tools: There has some tools to analyze the models or the training schedules efficiently and you could check it out ==> https://github.com/VRCMF/CenterNet2/tree/master/src/tools
+
+--------------------------------------------------------------------------------------------------
+
+The best model performance Easy:94.7 Medium:93.5 Hard:88.4
+
+--------------------------------------------------------------------------------------------------
